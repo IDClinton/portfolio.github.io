@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio website</title>
-
-<!-- css file link -->
-<link rel="stylesheet" href="styles.css"> 
+    <title>glassmorphism portfolio website design tutorial</title>
 
 <!-- font awesome cdn -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+<!-- css file link -->
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
     <!-- header section starts -->
 <header>
     <div class="user">
-        <img src="user-img.png" alt="">
+        <img src="images/user-img.png" alt="">
         <h3 class="name">Clinton Idemudia</h3>
         <p class="post">front end developer</p>
     </div>
@@ -233,8 +232,13 @@
         strings : ['web designer', 'front end developer', 'graphic designer', 'photographer'],
         typeSpeed: 120,
         loop:true
-    })
+    });
 
+    let themeColor = document.querySelectorAll('.theme-toggler span');
+    themeColor.forEach(color => color.addEventListener('click', () =>{
+        let background = color.style.background;
+        document.querySelector('body').style.background = background;
+    }));
 </script>
 </body>
 </html>
